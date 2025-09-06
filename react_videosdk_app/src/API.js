@@ -22,7 +22,6 @@ export const createMeeting = async ({ token = authToken }) => {
       throw new Error("Room ID not returned from API.");
     }
 
-    console.log("✅ Meeting created successfully:", roomId);
     return roomId;
   } catch (error) {
     console.error("❌ createMeeting error:", error.message);
@@ -32,8 +31,6 @@ export const createMeeting = async ({ token = authToken }) => {
 
 export const fetchHlsDownstreamUrl = async ({ meetingId, token = authToken }) => {
   try {
-    console.log("🔍 Fetching HLS for meetingId:", meetingId);
-
     const res = await fetch(
       `https://api.videosdk.live/v2/hls/?roomId=${meetingId}`,
       {
@@ -50,7 +47,6 @@ export const fetchHlsDownstreamUrl = async ({ meetingId, token = authToken }) =>
     }
 
     const json = await res.json();
-    console.log("📡 HLS API Response:", json);
 
     const firstItem = json?.data?.[0];
 
@@ -60,7 +56,6 @@ export const fetchHlsDownstreamUrl = async ({ meetingId, token = authToken }) =>
       );
     }
 
-    console.log("✅ HLS URL found:", firstItem.downstreamUrl);
     return firstItem.downstreamUrl;
   } catch (error) {
     console.error("❌ fetchHlsDownstreamUrl error:", error.message);

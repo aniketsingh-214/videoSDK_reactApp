@@ -12,7 +12,7 @@ function JoinScreen({ getMeetingAndToken }) {
   };
 
   const handleCreate = async () => {
-    await getMeetingAndToken(null); // <-- Force create new meeting
+    await getMeetingAndToken(null); 
   };
 
   return (
