@@ -33,14 +33,6 @@ The project demonstrates how to integrate VideoSDK into a React app for both **h
 
 ---
 
-## Screenshots
-*(Add your screenshots here for better clarity)*
-- Host Dashboard
-- Viewer HLS Player
-- Participant Controls
-
----
-
 ## Getting Started
 
 ### Prerequisites
