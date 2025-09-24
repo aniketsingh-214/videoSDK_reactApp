@@ -1,5 +1,5 @@
-export const authToken = process.env.NEXT_PUBLIC_AUTH_TOKEN;
-console.log("Auth Token (prod):", process.env.NEXT_PUBLIC_AUTH_TOKEN);
+export const authToken = import.meta.env.VITE_AUTH_TOKEN;
+console.log("Auth Token (prod):", authToken);
 
 export const createMeeting = async ({ token = authToken }) => {
   try {
@@ -62,6 +62,7 @@ export const fetchHlsDownstreamUrl = async ({ meetingId, token = authToken }) =>
     throw error;
   }
 };
+
 
 
 
