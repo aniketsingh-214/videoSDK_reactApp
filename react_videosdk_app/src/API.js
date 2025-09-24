@@ -1,5 +1,5 @@
 export const authToken =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlrZXkiOiI1YzM5N2E2Ny0wYWMzLTRhNzYtOTFiNi05NWY4YWM1ODI2YmUiLCJwZXJtaXNzaW9ucyI6WyJhbGxvd19qb2luIl0sImlhdCI6MTc1NzA5NDQxNywiZXhwIjoxNzU3Njk5MjE3fQ.p999SRaFlSFMlQK_aSl2feIz7vJRg-27sLskPf1Z280";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlrZXkiOiI1YzM5N2E2Ny0wYWMzLTRhNzYtOTFiNi05NWY4YWM1ODI2YmUiLCJwZXJtaXNzaW9ucyI6WyJhbGxvd19qb2luIl0sImlhdCI6MTc1ODcwODU3MywiZXhwIjoxNzU5MzEzMzczfQ.3HtQNWELK23ZmhQiOIADO5TNSG4cZge7pNWqLdwx0Mc";
 
 export const createMeeting = async ({ token = authToken }) => {
   try {
@@ -62,3 +62,4 @@ export const fetchHlsDownstreamUrl = async ({ meetingId, token = authToken }) =>
     throw error;
   }
 };
+
